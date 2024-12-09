@@ -44,7 +44,7 @@
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "Agendaion": {
               "budgets": [
                 {
                   "type": "initial",
@@ -65,13 +65,13 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "Agendaion"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": {
-              "buildTarget": "AgendaComp:build:production"
+            "Agendaion": {
+              "buildTarget": "AgendaComp:build:Agendaion"
             },
             "development": {
               "buildTarget": "AgendaComp:build:development"
