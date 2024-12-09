@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Agenda de Compromisso:</h1>
+  <form [formGroup]="FormGroupAgenda">
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Nome:</label>
+      <input formControlName = "name"   type="text" class="form-control" id="name" placeholder="Digite seu Nome">
+    </div>
+
+    <div class="mb-3">
+      <label for="days1" class="form-label">Dia(s):</label>
+      <input formControlName = "days1" type="text" class="form-control" id="days1" placeholder="Digite um Dia">
+    </div>
+
+    <div class="mb-3">
+      <label for="hours2" class="form-label">Hora(s):</label>
+      <input formControlName = "hours2" type="text" class="form-control" id="hours2" placeholder="Digite a(s) Hora(s)">
+    </div>
+
+    <div class="mb-3">
+      <label for="location3" class="form-label">Localização:</label>
+      <input formControlName = "location3" type="text" class="form-control" id="location3" placeholder="Digite a Localização">
+    </div>
+
+  </form>
+
+  <button *ngIf ="isEditing" type="button" class="btn btn-primary"  (click)= "update()"   >Salvar</button>
+
+  <button *ngIf="!isEditing"  type="button" class="btn btn-primary"  (click)= "save()"   >Criar</button>
+
+  </div>

@@ -1,26 +1,29 @@
-<table class="table">
+<div class="container">
+  < class="display5">
+      Agenda de Compromissos
+    </div>
+    <button class="btn btn-primary"   (click)="create()" >Novo</button>
+    <table class="table table-dark table-striped">
   <thead>
       <tr>
           <th scope="col">ID</th>
-          <th scope="col">Título</th>
-          <th scope="col">Nota</th>
-          <th scope="col">Artista</th>
-          <th scope="col">Gênero</th>
-          <th scope="col">Ano</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Dias</th>
+          <th scope="col">Horas</th>
+          <th scope="col">Localização</th>
       </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let agenda-compromisso of agenda-compromissos">
-      <th scope="row">{{agenda-compromisso.id}}</th>
-      <td>{{agenda-compromisso.name}}</td>
-      <td>{{agenda-compromisso.note}}</td>
-      <td>{{agenda-compromissoa.artist}}</td>
-      <td>{{agenda-compromissoa.year}}</td>
+    <tr *ngFor="let agendacomp of Agendacomps">
+      <th scope="row">{{agendacomp.id}}</th>
+      <td><a [routerLink]="['/agendacomp', agendacomp.id]">{{agendacomp.name}}</a> </td>
+      <td>{{agendacomp.name}}</td>
+      <td>{{agendacomp.days1}}</td>
+      <td>{{agendacomp.hours2}}</td>
+      <td>{{agendacomp.location3}}</td>
+      <td><button class ="btn btn-danger" (click)="delete(agendacomp)" >Remover</button> </td>
     </tr>
   </tbody>
-</table>
+  <table>
 
 
-
-
-agenda-compromisso

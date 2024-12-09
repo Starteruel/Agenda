@@ -1,19 +1,35 @@
 {
-  "posts": [
+ "Agenda" :[
+  {
+    "id" : 1,
+    "name": "Médico",
+    "days1": 15.0,
+    "hours2": 13.0,
+    "location3": "Rua pimentel"
+    },
+
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+      "id" : 2,
+      "name": "Dentista",
+      "days1": 8.0,
+      "hours2": 9.0,
+      "location3": "Rua Cardoso"
+      },
+
+      {
+        "id" : 3,
+        "name": "Compras",
+        "days1": 3.0,
+        "hours2": 20.0,
+        "location3": "Rua Freitas"
+        },
+
+        {
+          "id" : 4,
+          "name": "Escola",
+          "days1": 7.0,
+          "hours2": 6.0,
+          "location3": "Rua Gustavo"
+          }
+ ]
 }
