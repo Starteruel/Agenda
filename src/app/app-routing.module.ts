@@ -4,6 +4,7 @@ import { AgendaCompromissoComponent } from './agenda-compromisso/agenda-compromi
 import { AgendaItemComponent } from './agenda-item/agenda-item.component';
 import { HomeComponent } from './home/home.component';
 
+
 const routes: Routes = [
   {path: '', redirectTo : '/home', pathMatch: 'full'},
   {path: 'Agenda', component: AgendaCompromissoComponent},

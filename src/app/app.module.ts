@@ -17,9 +17,8 @@ import { HomeComponent } from './home/home.component';
     AgendaCompromissoComponent,
     AgendaItemComponent,
     NavBarComponent,
-    HomeComponent,
-
-
+    HomeComponent
+    
   ],
   imports: [
     BrowserModule,

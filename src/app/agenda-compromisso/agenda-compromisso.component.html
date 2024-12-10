@@ -1,5 +1,5 @@
 <div class="container">
-  < class="display5">
+  <div class = "display6">
       Agenda de Compromissos
     </div>
     <button class="btn btn-primary"   (click)="create()" >Novo</button>
@@ -14,7 +14,7 @@
       </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let agendacomp of Agendacomps">
+    <tr *ngFor="let agendacomp of Agenda">
       <th scope="row">{{agendacomp.id}}</th>
       <td><a [routerLink]="['/agendacomp', agendacomp.id]">{{agendacomp.name}}</a> </td>
       <td>{{agendacomp.name}}</td>

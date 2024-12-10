@@ -2,7 +2,7 @@ import { AgendaCompromissoComponent } from './agenda-compromisso/agenda-compromi
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Agendacomp } from './Agenda';
+import { agendacomp } from './Agenda';
 
 
 @Injectable({
@@ -10,27 +10,28 @@ import { Agendacomp } from './Agenda';
 })
 export class AgendaService {
 
-  private url = 'http://localhost:8080/agenda';
+  url = 'http://localhost:8080/agenda';
+
 
   constructor(private http:HttpClient) { }
-getAgendas(): Observable<Agendacomp []>{
-  return this.http.get<Agendacomp []>(this.url);
+getAgenda(): Observable<agendacomp []>{
+  return this.http.get<agendacomp []>(this.url);
 }
 
-getAgendasById(id:number): Observable<Agendacomp >{
-  return this.http.get<Agendacomp >( `${this.url}/${id}`);
+getAgendaById(id:number): Observable<agendacomp >{
+  return this.http.get<agendacomp >( `${this.url}/${id}`);
 }
 
- delete(Agenda:Agendacomp): Observable<void>{
+ delete(Agenda:agendacomp): Observable<void>{
   return this.http.delete<void>(`${this.url}/${Agenda.id}`);
  }
 
- update(Agenda:Agendacomp): Observable<Agendacomp>{
-  return this.http.put<Agendacomp>(`${this.url}/${Agenda.id}`, Agenda);
+ update(Agenda:agendacomp): Observable<agendacomp>{
+  return this.http.put<agendacomp>(`${this.url}/${Agenda.id}`, Agenda);
 }
 
-save(Agenda:Agendacomp): Observable<Agendacomp>{
-  return this.http.post<Agendacomp>(this.url, Agenda);
+save(Agenda:agendacomp): Observable<agendacomp>{
+  return this.http.post<agendacomp>(this.url, Agenda);
 }
 
 }

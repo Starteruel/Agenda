@@ -1,4 +1,4 @@
-import { Agendacomp } from './../Agenda';
+import { agendacomp } from './../Agenda';
 import { Router } from '@angular/router';
 import { AgendaService } from './../agenda.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,28 +10,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './agenda-compromisso.component.css'
 })
 export class AgendaCompromissoComponent implements OnInit{
-  Agenda: Agendacomp[] = [];
-Agendacomps: any;
+  Agenda: agendacomp[] = [];
+
+
 
   constructor(private service: AgendaService, private router: Router){}
 
   ngOnInit(): void {
-     this.LoadAgendacomp();
+     this.LoadAgenda();
   }
 
-  LoadAgendacomp() {
-    this.service.getAgendas().subscribe({
-      next: data => this.Agendacomps = data
+  LoadAgenda() {
+    this.service.getAgenda().subscribe({
+      next: data => this.Agenda = data
       }
     );
    }
-     delete(Agenda: Agendacomp){
+     delete(Agenda: agendacomp){
        this.service.delete(Agenda).subscribe({
-          next: () => this.LoadAgendacomp()
+          next: () => this.LoadAgenda()
        })
     }
       create(){
-        this.router.navigate(['agenda']);
+        this.router.navigate(['Agenda']);
       }
 
 }

@@ -1,4 +1,4 @@
-export interface Agendacomp{
+export interface agendacomp{
   id : number,
   name: string,
   days1: number,

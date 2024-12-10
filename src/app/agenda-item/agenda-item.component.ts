@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './agenda-item.component.css'
 })
 export class AgendaItemComponent implements OnInit{
+
   FormGroupAgenda: FormGroup;
   isEditing: boolean = false;
 
@@ -35,7 +36,7 @@ ngOnInit() {
  }
 }
 loadAgenda(id: number) {
- this.service.getAgendasById(id).subscribe({
+ this.service.getAgendaById(id).subscribe({
   next: data => this.FormGroupAgenda.setValue(data)
  });
 }
