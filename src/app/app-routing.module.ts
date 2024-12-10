@@ -7,9 +7,9 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: '', redirectTo : '/home', pathMatch: 'full'},
-  {path: 'Agenda', component: AgendaCompromissoComponent},
-  {path: 'Agenda/id', component: AgendaItemComponent},
-  {path: 'Agendas' ,  component: AgendaItemComponent},
+  {path: 'Agendas', component: AgendaCompromissoComponent},
+  {path: 'Agenda/:id', component: AgendaItemComponent},
+  {path: 'Agenda' ,  component: AgendaItemComponent},
   {path: 'home' ,  component: HomeComponent}
 
 ];

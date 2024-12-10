@@ -32,7 +32,7 @@ export class AgendaCompromissoComponent implements OnInit{
        })
     }
       create(){
-        this.router.navigate(['Agenda']);
-      }
+        this.router.navigate(['/Agenda']);
+      };
 
 }

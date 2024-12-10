@@ -16,7 +16,7 @@
   <tbody>
     <tr *ngFor="let agendacomp of Agenda">
       <th scope="row">{{agendacomp.id}}</th>
-      <td><a [routerLink]="['/agendacomp', agendacomp.id]">{{agendacomp.name}}</a> </td>
+      <td><a [routerLink]="['Agenda/', agendacomp.id]">{{agendacomp.name}}</a> </td>
       <td>{{agendacomp.name}}</td>
       <td>{{agendacomp.days1}}</td>
       <td>{{agendacomp.hours2}}</td>

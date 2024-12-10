@@ -50,7 +50,7 @@ update(){
 
 save(){
  this.service.save(this.FormGroupAgenda.value).subscribe({
-   next: () => this.router.navigate(['Agenda'])
+   next: () => this.router.navigate(['Agenda/id'])
  });
 }
 
