@@ -29,30 +29,27 @@ export class AgendaItemComponent implements OnInit{
 
 }
 ngOnInit() {
-  // Inscreva-se para observar as mudanças nos parâmetros da rota
   this.activeRoute.paramMap.subscribe(params => {
-    const id = Number(params.get('id'));  // ID da URL
-    console.log('ID recuperado:', id);
+    const id = Number(params.get('id'));  
 
     if (id !== 0 && id) {
       this.isEditing = true;
-      this.loadAgenda(id);  // Carregar os dados da agenda
+      this.loadAgenda(id);  
     }
   });
 }
 
 loadAgenda(id: number) {
-  console.log('Carregando dados da agenda com id:', id);  // Verifique se está sendo chamado
+  console.log('Carregando dados da agenda com id:', id);  
   this.service.getAgendaById(id).subscribe({
-    next: (data) => {
-      console.log('Dados recebidos:', data);  // Verifique os dados recebidos
+    next: (data) => {  
       this.FormGroupAgenda.setValue({
         id: data.id,
         name: data.name,
         days1: data.days1,
         hours2: data.hours2,
         location3: data.location3
-      });  // Preencher o formulário
+      });  
     },
     error: (err) => {
       console.error('Erro ao carregar agenda:', err);
