@@ -10,7 +10,7 @@ import { agendacomp } from './Agenda';
 })
 export class AgendaService {
 
-  url = 'http://localhost:8080/agenda';
+  url = 'https://api.agendastart.duckdns.org/agenda';
 
 
   constructor(private http:HttpClient) { }
